@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        height: 300px;
+        background-color: pink;
+        margin: 20px;
+        display: none;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <button id="btn1">展示div</button>
+    <button id="btn2">设置内容</button>
+    <div></div>
+    <div></div>
+    <div></div> 
+
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    //推荐使用下面的入口函数
+    // $(function () {
+    //     var btn1 = document.querySelector('#btn1');
+    //     var btn2 = document.querySelector('#btn2');
+    //     var divs = document.querySelectorAll('div');
+
+    //     btn1.onclick = function () {
+    //         for(var i =0 ; i<divs.length; i++){
+    //             divs[i].style.display = 'block';
+    //       }
+    //     }
+    //     btn2.onclick = function () {
+    //         for(var i = 0; i<divs.length; i++){
+    //             divs[i].innerText = '兰州  太他妈远了'
+    //         }
+    //     }
+    // })
+
+    // $(function () {
+    //     var btn1 = document.querySelector('#btn1');
+    //     var btn2 = document.querySelector('#btn2');
+    //     var divs = document.querySelectorAll('div');
+
+    //     btn1.onclick = function() {
+    //         for(var i = 0; i<divs.length; i++){
+    //             divs[i].style.display = 'block';
+    //         }
+    //     }
+    //     btn2.onclick = function () {
+    //         for(var i =0 ; i<divs.length; i++){
+    //             divs[i].innerText = '明天休息  但是要敲项目'
+    //         }
+    //     }
+    // })
+
+
+    //  //此写法也可以让浏览器打印
+    // $('#btn1').click(function (){
+    //    $('div').show(1000) 
+    // });
+    // $('#btn2').click(function (){
+    //     $('div').text('huilaiba')
+    // })
+
+
+
+    $('#btn1').click(function () {
+        $('div').show(800)
+    })
+    $('#btn2').click(function () {
+        $('div').text('sgnsg')
+    })
+    </script>
+</body>
+</html>

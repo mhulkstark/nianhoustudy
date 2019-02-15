@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 300px;
+        height: 300px;
+        background-color:pink;
+        padding: 20px;
+    }
+    p{
+        height: 30px;
+        background-color: #f53;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="innerP">这是大翁哥在家浪的样子</p>
+    </div>
+    <p class="outerP">这是大翁哥在外面时候骚的样子</p>
+
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    //B appendTo(A) 将B添加到A中
+    // $('.outerP').appendTo($('div'))
+    // $('.outerP').appendTo($('div'))
+
+
+    // $('.outerP').appendTo($('div'))
+    // $('.outerP').appendTo('div')
+    
+
+    //B prependTo(A) 将B添加到A中  并且作为第一个子元素
+    //   $('.outerP').prependTo($('div'))
+    // $('.outerP').prependTo($('div'))
+    // $('.outerP').prependTo('div')
+
+    // before() / after();
+    // A.before(B);  ==>  将B添加到A的前面去， A和B是兄弟
+    // A.after(B);   ==>  将B添加到A的后面去， A和B是兄弟
+    //   $('div').before($('.innerP'))
+    // $('div').before($('.innerP'))  
+    // $('div').after($('.innerP'))
+    // $("div").after( $(".innerP"));
+    </script>
+</body>
+</html>

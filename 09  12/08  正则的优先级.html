@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 优先级
+        //  |  或者  ， 优先级最低
+        //  ()  分组，  优先级最高
+    // console.log(/a|b|c/.test('abc'));   //true
+    // console.log(/a|b|c/.test('qwert'));  //false
+    
+    
+    // /foob|t/   | 的两边是一个单独的整体， 匹配的是 foob  或者 t
+    // console.log(/foob|t/.test('foot'));  //true
+    // console.log(/foob|t/.test('foot'));  //true
+    // console.log(/foob|t/.test('foot'));  //true
+    
+   //匹配的是 foot  boot
+//    console.log(/(f|b)oot/.test('foot')); //true
+//    console.log(/(f|b)oot/.test('boot')); //true
+   console.log(/(f|b)oot/.test('oot')); //false
+   
+
+    </script>
+</body>
+</html>

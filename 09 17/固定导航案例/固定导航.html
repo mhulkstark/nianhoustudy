@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+    
+        .main {
+            margin: 10px auto 0;
+            width: 1000px;
+        }
+    
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        </style>
+    
+</head>
+<body>
+    <div class="top" id="topPart">
+        <img src="../固定导航案例/picture/top.png" alt="" />
+    </div>
+    <div class="nav" id="navBar">
+        <img src="../固定导航案例/picture/nav.png" alt="" />
+    </div>
+    <div class="main" id="mainPart">
+        <img src="../固定导航案例/picture/main.png" alt="" />
+    </div>
+
+    <script src="../固定导航案例/jquery-1.12.4.js"></script>
+    <script>
+     // 思路：
+      // 1. 页面监听滚动事件  scroll
+      // 2. 获取页面垂直方向的卷曲距离  scrollTop
+      // 3. scrollTop 和 topPart 的高度进行比较
+      //       3.1  scrollTop  >= topPart 的高度进行比较  ==> 让navBar 固定定位
+      //            由于navBar 固定定位会脱标，不占位置，需要给 mainPart加上 marginTop ，值为 navBar的高度 + 原来的10px
+      //            
+      //       3.2  scrollTop  < topPart 的高度进行比较   ==> 取消固定定位
+                    // 记得恢复 mainPart加上 marginTop 为原来的10px
+    var $topPart = $('#topPart');
+    var $navBar = $('#navBar');
+    var $mainPart = $('#mainPart');
+
+    $(window).scroll(function (){
+
+    var scrollTop = $(window).scrollTop();
+
+    if(scrollTop >= $topPart.height ()){
+        $navBar.addClass('fixed');
+        $mainPart.css('mainPart', 10 + $navBar.height());
+    }else{
+            $navBar.removeClass('fixed');
+            $mainPart.css('marginTop',10);
+    }
+ })
+    
+    </script>
+</body>
+</html>

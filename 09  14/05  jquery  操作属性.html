@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../09  14/picture/04.gif" alt="">
+    <script src="../jquery-1.12.4.js"></script>
+
+    <script>
+    // jquery 操作属性
+        // attr(name, value);   // 设置单个属性
+        // attr(obj)            // 设置多个属性
+        // attr(name)           // 获取属性
+        // removeAttr(name)     // 移除属性
+// $('img').click(function (){
+//         $('img').attr({
+//              src : 'picture/25.jpg',
+//              alt : '要的啊',
+//         })
+// })
+
+
+$('img').click(function (){
+    $('img').attr({
+        src : 'picture/3.jpg',
+        title : '要的'
+    })
+})
+
+    // console.log($('img').attr('title'));
+    // $('img').removeAttr('title')
+    </script>
+</body>
+</html>

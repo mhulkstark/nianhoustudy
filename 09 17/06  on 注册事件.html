@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: #f99;
+            padding: 20px;
+        }
+        p{
+            padding: 20px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">解绑元素的点击事件</button>
+    <button id="create">创建p元素添加到div内</button>
+    <br>
+    <br>
+    <br>
+    <div>
+        <p>这是div内自带的p元素</p>
+    </div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    // on 注册事件
+        // 语法：  on(type, selector, data, fn);
+        //      selector:  选择器，如果存在， 是来注册委托事件，
+        //                  如果没有该参数，就是注册的普通事件
+        //                  参数是可选的。
+        //       data：  携带的数据， 可选
+
+      // 普通事件
+    $('p').on('click',function (){
+        alert(1)
+    })
+       $('#create').click(function (){
+           $('div').append($('<p>这是创建的</p>'))
+       })
+
+
+// 使用on 来注册事件委托
+        //   把事件注册给父元素，由指定的子元素去触发
+
+        $('div').on('click','p', function (){
+             // 该事件有指定的div下的p元素来触发
+            alert(255)
+        })
+    </script>
+</body>
+</html>

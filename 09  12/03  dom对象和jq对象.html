@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>老公来了</div>
+    <div>老公来了</div>
+    <div>老公来了</div>
+    <div>老公来了</div>
+    <div>老公来了</div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+     // dom对象： 通过原生js方法获取元素返回的对象就是dom对象
+    var divs = document.querySelectorAll('div');
+    // for(var i = 0; i<divs.length; i++){
+    //     divs[i].style.color = 'lime'
+    // }
+    // console.log(divs);
+    // dom 对象不能使用jq提供的方法,只能使用dom对象自己的属性和方法
+    // $('div').css('color','green');  获取的是标签div
+    $(divs).css('color','red');    //转成JQuery对象
+    $(divs)[0].style.backgroundColor = 'lime';
+
+    
+    
+    </script>
+</body>
+</html>

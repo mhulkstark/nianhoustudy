@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #f99;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="http://www.dawengge.com">大翁哥友情提示： 18岁以下禁止访问</a>
+    </div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    // var arr = [10, 20, 30, 40, 50];
+    //     // data:  携带的数据, 可以在事件处理函数里面使用, 一般不用
+    //     $("div").on("click", {name: "lw", age: 38}, function(e){
+    //         console.log(e);
+    //         //  console.log(e.data);
+
+    //         console.log(arr);
+    //     })
+    
+
+     // 阻止浏览器的默认行为
+              // e.preventDefault();
+              // e.stopPropagation();
+
+              // 在jq中，return false 会起到 即能阻止浏览器的默认行为，还可以阻止事件冒泡
+
+              // 在原生js中，return false，只能阻止浏览器的默认行为
+    $('div').on('click',function (){
+        alert('div click')
+    })
+    
+    $('a').on('click',function (){
+        alert('qqqq');
+        return false;
+    })
+    </script>
+</body>
+</html>

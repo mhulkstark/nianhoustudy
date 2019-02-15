@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .comment {
+            font-size: 40px;
+            color: #ff16cf;
+        }
+
+        .comment li {
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="comment">
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+    </ul>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>                 
+        $(function () {
+            // 思路：
+            // 1. 获取li元素
+            // 2. 给li 注册 mouseenter
+            // 3. 当前的li 以及前面所有的li 变成实心
+            //      让当前的li 的后面所有的li 变成空心
+            // 4. 获取ul
+            // 5. 给ul 注册 mouseleave
+            // 6. 让所有的li变成空心
+            // 7. 给li 注册 click
+            // 8. 给点击的那个li 加个标记 （添加一个独一无二的类名）
+            //      当鼠标离开的时候，找到这个类名， 设置实心，以及前面所有的都是实心
+            var wjx_k = '☆';
+            var wjx_s = '★';
+            var $lis = $('.comment li');
+            $lis.mouseenter(function (){
+                $(this).text(wjx_s).prevAll().text(wjx_s);
+                $(this).nextAll().text(wjx_k);
+            })
+            var $ul = $('.comment');
+            $ul.mouseleave(function (){
+                $lis.text(wjx_k);
+                $('.comment li.active').text(wjx_s).prevAll().text(wjx_s);
+            })
+            $lis.click(function (){
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+
+        //     var wjx_s = "★";
+        //     var wjx_k = "☆";
+        //     var $lis = $('.comment li');
+        //     $lis.mouseenter(function () {
+        //         // prev()  ==>  上一个兄弟
+        //         // prevAll()  ==>  前面所有的
+        //         // nextAll()  ==>  后面所有的
+        //         $(this).text(wjx_s).prevAll().text(wjx_s);
+        //         $(this).nextAll().text(wjx_k);
+        //     })
+        //     var $ul = $('.comment');
+        //     $ul.mouseleave(function () {
+        //         $lis.text(wjx_k);  // 所有的li变成空心
+        //         // 找到有active的li元素，把他设置成实心，以及前面所有的变成实心
+        //         $('.comment li.active').text(wjx_s).prevAll().text(wjx_s);
+        //     })
+        //     $lis.click(function () {
+        //         $(this).addClass('active').siblings().removeClass('active')
+        //     })
+        })
+    </script>
+</body>
+
+</html>

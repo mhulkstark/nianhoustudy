@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+    }
+    
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    // 需求： 让动画有先后顺序，依次执行动画
+
+    // 在对象里面写多个键值对，同时运动
+    $('div')
+    .animate({
+        top : 500
+    })
+    .animate({
+        left : 1000
+    })
+    // .animate({
+    //     right : 300
+    // })
+    .animate({
+        borderRadius : 100
+    })
+
+
+
+
+
+
+    // $('div')
+    // .animate({
+    //     left : 500
+    // })
+    // .animate({
+    //     top : 300
+    // })
+    // .animate({
+    //     borderRadius : 100
+    // })
+    </script>
+</body>
+</html>

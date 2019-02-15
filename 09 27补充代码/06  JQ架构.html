@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // jq架构：
+        // 沙箱模式:  减少全局污染
+        // 参数的说明：
+        //  window: 
+        //      1. 有利于代码压缩
+        //      2. 减少对window的搜索过程
+        //  
+        //  undefined： 
+        //      形参undefined 的实际值 就是 数据类型 undefined
+        //       作用是： 防止undefined在ie678中被修改成其他值。
+        //      
+        // (function(window, undefined){
+        // })(window)
+       (function (window){
+            // 对于形参window， 是函数的局部变量
+            // var window = window;
+           function niubi () {
+               alert('那是相当牛逼啊');
+           }
+           window.niubi = niubi;
+       }) (window)
+        niubi();
+    </script>
+</body>
+</html>

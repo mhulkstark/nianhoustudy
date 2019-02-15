@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* div{
+        width: 200px;
+        height: 200px;
+        background-color:red;
+        position: relative;
+    } */
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        position: relative;
+        color: blueviolet;
+        text-align: center;
+        line-height: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div>项目没提前沟通好真的蛋疼</div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    $('div').animate({
+        top : 200,
+        left : 300,
+        borderRadius : 100
+    },2500)
+    
+    
+    </script>
+    <!-- <script>
+    $('div').animate({
+      top :200,
+      left : 500,
+      borderRadius : 100
+    },2000) -->
+    
+    </script>
+</body>
+</html>

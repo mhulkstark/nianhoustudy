@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        select {
+            width: 200px;
+            background-color: teal;
+            height: 200px;
+            font-size: 20px;
+        }
+    
+        .btn-box {
+            width: 30px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <h1>城市选择</h1>
+    <select name="src-city" id="src-city" multiple>
+      <option value="1">北京</option>
+      <option value="2">上海</option>
+      <option value="3">广州</option>
+      <option value="4">深圳</option>
+      <option value="5">西红柿</option>
+    </select>
+    <div class="btn-box">
+      <button id="btn1"> &gt;&gt; </button>
+      <button id="btn2"> &lt;&lt; </button>
+      <button id="btn3"> &gt;</button>
+      <button id="btn4"> &lt; </button>
+    </div>
+    <select name="tar-city" id="tar-city" multiple></select>
+
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+     // 1. 左边的全部到右边去
+
+
+     // 2. 右边的全部到左边去
+
+     // 1. 左边的全部到右边去
+     $('#btn1').click(function (){
+        $('#tar-city').append($('#src-city option'))
+     })
+
+    // 2. 右边的全部到左边去
+    $('#btn2').click(function (){
+        $('$tar-city option').appendTo($('src-city'));
+    })
+    
+     // 3. 左边选中的到右边去
+     // append()
+            // :checked  ==> 单选、多选的选中状态
+            // :selected     下拉框的选中状态
+
+    $('#btn3').click(function (){
+       $('tar-city option').appendTo($('#src-city option:selected'));
+    })
+    
+
+     // 4. 右边选中的到左边去
+    $('#btn4').click(function (){
+        $('#tar-city option:selected').appendTo('#src-city')
+    })
+
+    </script>
+</body>
+</html>

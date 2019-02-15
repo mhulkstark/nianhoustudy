@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // undefined
+
+        // undefined 是个简单数据类型， 值是undefined
+
+        // undefined数据类型 在ie678上可以被修改
+
+        undefined = 12;
+
+        console.log(undefined);
+        
+        
+        (function(undefined){
+            // var undefined = undefined;   
+            // 形参undefined占位，值是undefined，这样好处，在ie678上，如果undefined的值被修改了，也不会影响沙箱内部的undefined的值。
+
+            console.log(undefined); // 
+        })()
+    </script>
+</body>
+</html>

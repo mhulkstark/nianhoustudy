@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 边界类元字符
+        // ^:  开始，  [^]:  非，
+        // $： 结束
+    console.log(/chuan/.test('dachuan'));
+    console.log(/chuan/.test('chuang'));
+    console.log(/chuan/.test('chuanchuan'));  //这三个都是true
+    
+    // ^
+    console.log(/^chuan/.test('dachuan'));  //false
+    console.log(/^chuan/.test('chuanchuan'));  //true
+    console.log(/^chuan/.test('chuang'));  //true
+    
+    // $
+    console.log(/chuan$/.test('dachuan')); //true
+    console.log(/chuan$/.test('chuang')); //false
+    console.log(/chuan$/.test('chuanchuan')); //true
+    
+    // ^ $   
+    // ^ $ 在一起使用的时候，表示精确匹配
+    console.log(/^chuan$/.test('dachuan')); //false
+    console.log(/^chuan$/.test('chuanchuan')); //false
+    console.log(/^chuan$/.test('chuan'));  //true
+    console.log(/^chuan$/.test('chuang')); //false
+    
+    
+    </script>
+</body>
+</html>

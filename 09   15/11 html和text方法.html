@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    // html方法与text方法
+        // 原生js
+        // innerHTML  :  可以识别标签 
+        // innerText  :  识别不了标签，会对标签进行转义
+    
+    // $('.box').html('123');
+    // $('.box').html("<h2>这是文字</h2>");
+    // console.log($('.box').html());
+    
+    // $('.box').text('123123');
+    $('.box').text("<h2>这是text文字</h2>")
+    console.log($('.box').text());
+    
+    </script>
+</body>
+</html>

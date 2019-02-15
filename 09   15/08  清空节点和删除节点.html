@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>这是P元素</p>
+    </div>
+    <script src="../jquery-1.12.4.js"></script>
+   
+    <script>
+     // empty()   ==> 清空，清空里面的子元素，自身保留，清理门户的效果
+     // $('div').empty()
+    
+     // remove()   ==> 移除， 自身都移除掉，  自杀的效果
+    //  $('div').remove()
+
+
+     // clone()   ==> 克隆节点
+    //  参数，是否克隆元素的事件，如果是true，表示克隆，默认值是false
+    $('p').click(function (){
+        alert(111)
+    });
+    var $p = $('p').clone(true);
+    $('div').append($p)  
+    </script>
+</body>
+</html>

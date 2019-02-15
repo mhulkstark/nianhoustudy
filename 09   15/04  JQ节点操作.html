@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    // //原生JS写法
+    // var a = document.createElement('a');
+    // a.href = 'http://www.lg.com';
+    // a.target = '_blank';
+    // a.innerText = '老公是上海校区的  但是还是可以追的   毕竟29期都是大神';
+    // document.body.appendChild(a);
+
+    // JQ写法
+    // 创建节点：  语法： $("html字符串")
+    var $a = $('<a href="http://www.lg.com" target = "_blank">老公是上海校区的  但是还是可以追的   毕竟29期都是大神</a>')
+    // var $a = $('<a href="http://www.lg.com" target = "_blank">老公是上海校区的  但是还是可以追的   毕竟29期都是大神</a>')
+    // $('body').append($a)
+    $('body').append($a)
+    </script>
+</body>
+</html>

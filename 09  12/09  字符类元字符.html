@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // []:  在正则里面，表示一个字符的位置，[]里面写上可能出现的字符
+        //      在 [] 里面可以使用 "-" 表示范围的意思
+        // [^] : ^ 在 [] 表示非的意思，不能出现[]里面的任意一个字符
+    
+    
+    // [a-z] : 表示一个字符， 可以是a-z其中任意一个
+        // [0-9] : 表示一个字符， 可以是0-9其中任意一个
+        // [A-Z] : 表示一个字符， 可以是A-Z其中任意一个
+
+        // [a-z0-9A-Z] : 匹配a-z 0-9 A-Z 其中任意一个
+
+    // console.log(/[0-9]/.test("123")); // true
+        // console.log(/[0-9]/.test("abc")); // false
+        // console.log(/[3-6a-f]/.test("abc")); // true
+
+
+        // console.log(/[^abc]/.test("def")); // true
+        // console.log(/[^abc]/.test("dea")); // true
+        console.log(/[^0]/.test("abc")); // true
+        console.log(/[^0]/.test("0")); // false
+        console.log(/[^0]/.test("0123")); // true
+    
+    </script>
+</body>
+</html>

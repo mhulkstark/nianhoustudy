@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="dawengge.js"></script>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // 多库共存
+        // console.log($); // jquery
+
+        // jquery 可以释放jQuery对$ 符号的控制权
+        //      noConflict() 有返回值， 返回了$的功能
+    var a = jQuery.noConflict();  // $ 符号的功能
+    console.log(a);
+    
+    // 使用自定义变量来使用$ 的功能
+    a(function (){
+        a('body').css('backgroundColor','pink')
+    })
+    console.log($); //wengge
+    $niubi();
+    </script>
+</body>
+</html>

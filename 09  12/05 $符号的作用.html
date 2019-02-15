@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 300px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        // $ 来源： jq提供
+        //  $ 是个函数     可以打印 $ 尝试
+        console.log($);
+        
+    // $() 的功能十分强大，可以根据参数的不同，作用不一样
+        // 1. 参数为函数，   作用是 入口函数的功能
+        //          $(function(){})
+        // 2. 参数为选择器 ， 作用是获取页面中元素
+        //          $("div")
+        // 3. 参数为dom对象， 作用是将dom对象转成jq对象
+        //          $(document)
+
+
+         // 除了使用 $ 符号来使用jq提供的功能，还可以使用 jQuery
+        //  var div = $('div');
+
+        //  jQuery(function (){
+        //      jQuery('div').css('backgroundColor','#f12');  改变div的颜色
+        //  })
+
+
+        //改变整个div页面的颜色
+        jQuery(function (){
+            jQuery('div').css('backgroundColor','#f11')
+        })
+     </script>
+</body>
+</html>

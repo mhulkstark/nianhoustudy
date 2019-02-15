@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height: 4000px;
+            width: 4000px;
+        }
+    </style>
+</head>
+<body>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+     // 原生js去
+     // window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    
+     // scrollTop():  设置和获取垂直方向的页面卷曲距离
+        // scrollLeft():  设置和获取水平方向的页面卷曲距离
+        // 传参就是设置
+        // 不传参就是获取
+
+        // $(window).scrollTop(1000)
+
+    // 监听页面滚动事件   scroll
+    $(Window).scroll(function (){
+        // console.log($(window).scrollLeft(1000) );
+        console.log($(window).scrollTop());
+        
+    })
+    </script>
+</body>
+</html>

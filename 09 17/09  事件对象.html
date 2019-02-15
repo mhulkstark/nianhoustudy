@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: #f99;
+            }
+    
+        </style>
+</head>
+<body>
+        <div>
+                <a href="http://www.dawengge.com">大翁哥友情提示： 18岁以下禁止访问</a>
+            </div>
+            <script src="../jquery-1.12.4.js"></script>
+            <script>
+
+            //正常表现
+            $('div').on('click',function (){
+                alert(1);
+                
+            })
+            
+            // 阻止浏览器的默认行为
+              // e.preventDefault();
+              // e.stopPropagation()
+            $('a').on('click',function (){
+                alert('sss')
+                return false;
+            })
+            </script>
+</body>
+</html>

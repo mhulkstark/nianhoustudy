@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="后天休息   但是也要学习">
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    // 搜索框
+        // 1. 聚焦的时候（focus）, 判断输入框的内容是否为默认值（“29期，明天可以休息了”），
+        //              清空输入框的内容，把内容设置为 ""
+        // 2. 失焦的时候（blur）, 判断输入框的内容是否为空， 就设置为默认值
+        // .val() 这是个语法   获取表单元素值
+    $('input').focus(function (){
+        var val = $(this).val();
+        if(val == "后天休息   但是也要学习"){
+            $(this).val("");
+        }
+    });
+    $('input').blur(function (){
+        var val = $(this).val();
+        if(val.trim().length == 0){
+            $(this).val('后天休息   但是也要学习')
+        }
+    })
+
+    // $('input').focus(function (){
+    //    var val = $(this).val();
+    //    if(val == "后天休息   但是也要学习"){
+    //        $(this).val("");
+    //    }
+    // });
+    // $('input').blur(function (){
+    //     var val = $(this).val();
+    //     // trim()  ==> 字符串的方法，  去除掉字符串前后的空格
+    //         // val.trim().length  ==> 判断字符串的长度
+    //     if(val.trim().length == 0){
+    //         $(this).val("后天休息   但是也要学习");
+    //     }
+    // });
+    </script>
+</body>
+</html>

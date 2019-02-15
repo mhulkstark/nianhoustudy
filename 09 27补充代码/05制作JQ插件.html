@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        测试我们自己做 插件呢
+        <script src="../jquery-1.12.4.js"></script>
+        <script src="./jquery.bgc.js"></script>
+
+        <script>
+        $(function (){
+            // 制作jQuery插件
+            // $("img.lazy")  是实例对象，可以理解是jQuery的实例对象
+
+            // jQuery的插件的核心思想： 把方法添加到jQuery的原型上
+
+            // jQuery的原型：
+            //  1. jQuery.prototype
+            //  2. jQuery.fn
+            //  3. $.prototype
+            //  4. $.fn
+
+            console.log($('body').bgc('pink'));
+            $('body').bgc('pink').css('fontSize',30);
+        })
+        
+        </script>
+</body>
+</html>

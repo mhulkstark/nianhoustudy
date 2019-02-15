@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        height: 8000px;
+    }
+
+    a {
+        color: #FFF;
+    }
+
+    .actGotop {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        width: 150px;
+        height: 195px;
+        display: none;
+        z-index: 100;
+    }
+
+    .actGotop a,
+    .actGotop a:link {
+        width: 150px;
+        height: 195px;
+        display: inline-block;
+        background: url("gotop.png") no-repeat;
+        outline: none;
+    }
+
+    .actGotop a:hover {
+        width: 150px;
+        height: 195px;
+        background: url("gotop.gif") no-repeat;
+        outline: none;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="actGotop"><a href="javascript:;" title="Top"></a></div>
+    <script src="../小火箭案例/jquery-1.12.4.js"></script>
+    <script>
+        $(function (){
+
+            // 1. 控制小火箭的显示与隐藏
+                    // 思路：
+                    //  1. 监听页面滚动事件
+                    //  2. 获取到页面垂直方向的卷曲距离  scrollTop
+                    //  3. scrollTop  >= 1000  ,, 小火箭显示
+                    //      scrollTop  < 1000  ,, 小火箭隐藏
+            var $gotop = $('.actGotop');
+            $(window).scroll(function (){
+                var scrollTop = $(window).scrollTop();
+                console.log(scrollTop);
+                if(scrollTop >= 1000){
+                    $gotop.fadeIn(1000);
+                    
+                }else{
+                    $gotop.fadeOut(1000);
+                }
+            })
+        
+            // 2. 点击小火箭返回顶部(缓慢的)
+            $gotop.click(function (){
+                $('html,body').animate({
+                    scrollTop : 0
+                },200)
+            })
+        })
+    </script>
+</body>
+</html>

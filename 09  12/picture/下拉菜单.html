@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    .wrap{
+        width: 330px;
+        height: 30px;
+        margin: 100px auto 0;
+        padding-left: 10px;
+        background-image: url(bg.jpg);
+    }
+
+
+    .wrap li{
+        background-image: url(libg.jpg);
+    }
+    
+    .wrap>ul>li{
+        float: left;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    .wrap a {
+        display: block;
+        height: 30px;
+        width: 100px;
+        text-decoration: none;
+        color: #000;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .wrap li ul {
+        position: absolute;
+        top: 30px;
+        display: none;
+    }
+
+    </style>
+</head>
+<body>
+        <div class="wrap">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">一级菜单1</a>
+                        <ul class="ul">
+                            <li><a href="javascript:void(0);">二级菜单11</a></li>
+                            <li><a href="javascript:void(0);">二级菜单12</a></li>
+                            <li><a href="javascript:void(0);">二级菜单13</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">一级菜单2</a>
+                        <ul>
+                            <li><a href="javascript:void(0);">二级菜单21</a></li>
+                            <li><a href="javascript:void(0);">二级菜单22</a></li>
+                            <li><a href="javascript:void(0);">二级菜单23</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">一级菜单3</a>
+                        <ul>
+                            <li><a href="javascript:void(0);">二级菜单31</a></li>
+                            <li><a href="javascript:void(0);">二级菜单32</a></li>
+                            <li><a href="javascript:void(0);">二级菜单33</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+        <script src="../../jquery-1.12.4.js"></script>
+        <script>
+        // 思路：
+        // 1. 获取到一级菜单li
+        // 2. 给li注册 mouseover
+        // 3. 展示当前li下的ul
+        // 4. 给li 注册 mouseleave
+        // 4. 隐藏当前li下的ul
+        
+        // 获取元素一定要精确获取
+        // 建议： 对于经常需要获取的元素，使用变量保存起来
+        //      变量的命名是在前面加上$符号， 标识该变量存储的是jq对象
+
+        $(function (){
+            var $lis = $('.wrap>ul>li');
+            $lis.mouseover(function (){
+                $(this).children('ul').show();
+            });
+            $lis.mouseleave(function (){
+                $(this).children('ul').hide();
+            })
+        })
+
+
+        
+
+        // $(function (){
+        //     var $lis = $('.wrap>ul>li');
+        //     $lis.mouseover(function () {
+        //         $(this).children('ul').show();
+        //     });
+        //     $lis.mouseleave(function () {
+        //         $(this).children('ul').hide();
+        //     })
+        // })
+
+
+    //  $(function (){
+    //         var $lis = $('.wrap>ul>li');
+    //         $lis.mouseover(function () {
+    //             $(this).children('ul').show();
+    //         });
+
+    //     $lis.mouseleave(function () {
+    //         $(this).children('ul').hide();
+    //     })
+    //  })
+
+        </script>
+</body>
+</html>

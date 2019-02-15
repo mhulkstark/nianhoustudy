@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        display: none;
+    }
+    
+    </style>
+</head>
+<body>
+    <button id="btn1">展示动画</button>
+    <button id="btn2">停止动画</button>
+    <div></div>
+
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+    // stop():  停止当前正在执行的动画, 如果动画队列里面还有后续动画，执行后续动画。
+    // stop的两个参数：
+        //  stop(clearQueue, jumpToEnd);
+        //      clearQueue: 是否清除动画队列， 如果是true， 清除掉
+        //      jumpToEnd： 是否跳转到当前正在执行的动画的最终状态，如果是true，跳转到最终状态
+        //      两个默认值都是false
+    
+    var $btn2 = $('#btn2');
+    var $btn1 = $('#btn1');
+    $btn1.click(function (){
+        $('div').slideDown(2000).slideUp(2000)
+    })
+    $btn2.click(function (){
+        $('div').stop(true,true)
+    })
+
+
+
+    // $('#btn1').click(function (){
+    //     $('div').slideDown(2000).slideUp(2000)
+    // })
+
+    // $('#btn2').click(function (){
+    //     $('div').stop(true,true)
+    // })
+
+
+
+
+
+    </script>
+</body>
+</html>

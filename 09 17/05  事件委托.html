@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        ul,li{
+            list-style: none;
+        }
+        ul{
+            padding: 20px;
+            background-color: #f99;
+        }
+        li{
+            padding: 10px;
+            background-color: #ccc;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+        <li>大家今天很兴奋，都醒了，待会我们要看美食节目了</li>
+    </ul>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+ // 事件委托
+        //  把事件注册给父元素，由指定的子元素去触发
+        // 原理： 事件冒泡
+        // 好处： 
+        //  1. 支持动态绑定
+        //  2. 节省内存 ， 性能优化
+    // var ul = document.querySelector('ul');
+    // ul.onclick = function (e) {
+    //     if(e.target.nodeName == 'LI'){
+    //         alert(123)
+    //     }
+    // }
+
+    var $ul = $('ul');
+    $ul.click(function (e){
+        if(e.target.nodeName == 'LI'){
+            alert(4555)
+        }
+    })
+</script>
+</body>
+</html>
